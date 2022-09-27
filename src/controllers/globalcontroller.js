@@ -25,7 +25,7 @@ export const getdb =async (req,res) => {
     const check = await Fish.exists({ id: req.params.id });
     if (check)
     {
-        const fish = await Fish.find();
+        const fish = await Fish.find( { id: req.params.id } );
         console.log("Existing Fish!!");
         
         res.json(fish);
