@@ -1,0 +1,12 @@
+doctype html
+html(lang="ko")
+    head
+        title Fish
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+    body
+        form(action="api"  method="post" enctype="multipart/form-data")
+            input(type="file" name="file")
+            input(type="submit" value="submit")
+        block content
+
+    include partials/footer.pug
