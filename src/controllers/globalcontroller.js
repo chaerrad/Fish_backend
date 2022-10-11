@@ -7,6 +7,7 @@ const fs = require("fs");
 export const serveapi = (req,res) => {
     try{
     fs.unlinkSync('uploads/google2001.jpg');
+    
     }
     catch(err){
         console.log("Error in deleting");
@@ -16,7 +17,14 @@ export const serveapi = (req,res) => {
 
 
 export const getphoto = (req,res) => {
-    console.log(req.file);
+    const {spawn} = require('child_process');
+    const py = spawn('python',[ 'C:\\Users\\user\\Documents\\fish\\src\\python.py']);
+    py.stdout.on('data', function(data) {
+        console.log(data.toString());
+    });
+    py.stderr.on('data', function(data) {
+        console.log(data.toString());
+    });
     return res.send(req.file);
 }
 
@@ -25,6 +33,7 @@ export const getdb =async (req,res) => {
     const check = await Fish.exists({ id: req.params.id });
     if (check)
     {
+        
         const fish = await Fish.find( { id: req.params.id } );
         console.log("Existing Fish!!");
         
