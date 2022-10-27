@@ -21,7 +21,7 @@ var percent;
 var The_fish2;
 export const getphoto = (req,res) => {
     const {spawn} = require('child_process');
-    const py = spawn('python',[ '\\home\\ubuntu\\fish_backend\\src\\python.py']);
+    const py = spawn('python',['/home/ubuntu/fish_backend/src/python.py']);
     try{
         py.stdout.on ('data', function (data) {
             rs = data.toString();

@@ -17,11 +17,11 @@ import copy
 from PIL import Image
 import torch.nn.functional as F
 md = torch.load(
-    'C:\\Users\\user\\Documents\\fish\\src\\resnet_total_with_test.pt', map_location='cpu')
+    '/home/ubuntu/fish_backend/src/resnet_total_with_test.pt', map_location='cpu')
 md.eval()
 
 test_img = Image.open(
-    'C:\\Users\\user\\Documents\\fish\\uploads\\google2001.jpg').convert('RGB')
+    '/home/ubuntu/fish_backend/uploads/google2001.jpg').convert('RGB')
 preprocess = transforms.Compose([
     transforms.Resize(256),
     transforms.CenterCrop(224),
