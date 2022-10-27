@@ -82,16 +82,22 @@ export const getphoto = (req,res) => {
     }
 }
 
-
+var ss;
+var ds;
+var show;
 export const getdb =async (req,res) => {
     const check = await Fish.exists({ id: req.params.id });
     if (check)
     {
         
         const fish = await Fish.find( { id: req.params.id } );
-        
-        
-        res.send(fish);
+        ss= JSON.stringify(fish)
+        console.log(ss);
+        ds= JSON.parse(ss);
+        const name = ds[0].id;
+        const cannotcatch = ds[0].cannotcatch
+        show= `You cannot catch ${name} in ${cannotcatch}`
+        res.send(show);
     }
     else {
         console.log("Safe Fish");
