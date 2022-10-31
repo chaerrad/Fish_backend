@@ -21,7 +21,7 @@ var percent;
 var The_fish2;
 export const getphoto = (req,res) => {
     const {spawn} = require('child_process');
-    const py = spawn('python',['/home/ubuntu/fish_backend/src/python.py']);
+    const py = spawn('python',["C:/Users/user/Documents/fish/src/python.py"]);
     try{
         py.stdout.on ('data', function (data) {
             rs = data.toString();
@@ -92,12 +92,12 @@ export const getdb =async (req,res) => {
         
         const fish = await Fish.find( { id: req.params.id } );
         ss= JSON.stringify(fish)
-        console.log(ss);
+        
         ds= JSON.parse(ss);
         const name = ds[0].id;
         const cannotcatch = ds[0].cannotcatch
-        show= `You cannot catch ${name} in ${cannotcatch}`
-        res.send(show);
+        console.log(fish)
+        res.render("fish",{fishName: `${name}`});
     }
     else {
         console.log("Safe Fish");

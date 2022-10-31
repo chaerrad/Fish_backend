@@ -3,11 +3,7 @@ html(lang="ko")
     head
         title Fish
         link(rel="stylesheet" href="https://unpkg.com/mvp.css")
-        
     body(style= "background: rgb(105,153,227)")
-        form(action="api"  method="post" enctype="multipart/form-data")
-            input(type="file" name="file")
-            input(type="submit" value="submit" style="background:orange")
+        span  #{fishName}
         
-
     include partials/footer.pug
