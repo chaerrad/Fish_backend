@@ -68,7 +68,8 @@ export const getphoto = (req,res) => {
                 return res.redirect(`/fish/yeolmokfish`);
             }
             else{
-                return res.render("home.pug")
+                console.log("percent low");
+                return res.redirect("/api")
             }
 
 
@@ -84,7 +85,6 @@ export const getphoto = (req,res) => {
 
 var ss;
 var ds;
-var show;
 export const getdb =async (req,res) => {
     const check = await Fish.exists({ id: req.params.id });
     if (check)
@@ -94,13 +94,12 @@ export const getdb =async (req,res) => {
         ss= JSON.stringify(fish)
         
         ds= JSON.parse(ss);
-        const name = ds[0].id;
-        const cannotcatch = ds[0].cannotcatch
-        console.log(fish)
-        res.render("fish",{fishName: `${name}`});
+        const name = ds[0].koreaName;
+        
+        return res.render("fish",{fishName: `${name}`});
     }
     else {
-        console.log("Safe Fish");
-        res.render("home.pug")
+        console.log("Not in db");
+        return res.redirect("/api")
     }
 }
