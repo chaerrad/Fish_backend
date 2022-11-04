@@ -28,8 +28,11 @@ export const getphoto = (req,res) => {
             arr = rs.split(" ")
             
             The_fish = arr[0];
+            console.log("Fish is")
             console.log(The_fish);
+
             percent = arr[1][12];
+            console.log("percent is")
             console.log(percent);        
             
             console.log(The_fish2);
