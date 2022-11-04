@@ -28,8 +28,9 @@ export const getphoto = (req,res) => {
             arr = rs.split(" ")
             
             The_fish = arr[0];
+            console.log(The_fish);
             percent = arr[1][12];
-                     
+            console.log(percent);        
             
             console.log(The_fish2);
             if(percent==7 || percent ==8 || percent==9)
