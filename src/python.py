@@ -30,7 +30,7 @@ preprocess = transforms.Compose([
         mean=[0.485, 0.456, 0.406],
         std=[0.229, 0.224, 0.225]
     )])
-# 연산을 gpu로 하겠다는 뜻.
+
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 test_img_preprocessed = preprocess(test_img)
 batch_test_img_tensor = torch.unsqueeze(test_img_preprocessed, 0)
