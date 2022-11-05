@@ -17,7 +17,7 @@ import copy
 from PIL import Image
 import torch.nn.functional as F
 md = torch.load(
-    '/root/fish_backend/src/resnet_total_with_test.pt', map_location='cpu')
+    '/root/fish_backend/src/resnet_with_dummy.pt', map_location='cpu')
 md.eval()
 
 test_img = Image.open(

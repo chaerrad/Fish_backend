@@ -49,21 +49,21 @@ export const getphoto = (req,res) => {
                 if(The_fish == 4)
                 return res.redirect(`/fish/darkrockfish`);
                 if(The_fish == 5)
-                return res.redirect(`/fish/eel`);
+                return res.redirect(`/fish/dummy`);
                 if(The_fish == 6)
-                return res.redirect(`/fish/flounder`);
+                return res.redirect(`/fish/eel`);
                 if(The_fish == 7)
-                return res.redirect(`/fish/horsemackerel`);
+                return res.redirect(`/fish/flounder`);
                 if(The_fish == 8)
-                return res.redirect(`/fish/leopardmandarinfish`);
+                return res.redirect(`/fish/horsemackerel`);
                 if(The_fish == 9)
-                return res.redirect(`/fish/otakii`);
+                return res.redirect(`/fish/leopardmandarinfish`);
                 if(The_fish == 10)
-                return res.redirect(`/fish/referrer`);
+                return res.redirect(`/fish/otakii`);
                 if(The_fish == 11)
-                return res.redirect(`/fish/rockfish`);
+                return res.redirect(`/fish/referrer`);
                 if(The_fish == 12)
-                return res.redirect(`/fish/smelt`);
+                return res.redirect(`/fish/rockfish`);
                 if(The_fish == 13)
                 return res.redirect(`/fish/titlefish`);
                 if(The_fish == 14)
