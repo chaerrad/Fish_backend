@@ -73,7 +73,7 @@ export const getphoto = (req,res) => {
             }
             else{
                 console.log("percent low");
-                return res.render("home",{error: "오류입니다."})
+                return res.render("home",{error: "분류할수없는 물고기입니다."})
             }
 
 
@@ -104,6 +104,6 @@ export const getdb =async (req,res) => {
     }
     else {
         console.log("Not in db");
-        return res.redirect("/api")
+        return res.render("home",{error: "분류할수없는 물고기입니다."})
     }
 }
