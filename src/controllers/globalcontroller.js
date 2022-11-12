@@ -12,7 +12,7 @@ export const serveapi = (req,res) => {
     catch(err){
         console.log("Error in deleting");
     }
-    return res.render("home.pug");
+    return res.render("home",{error: ""})
 }
 var rs;
 var arr;
@@ -73,7 +73,7 @@ export const getphoto = (req,res) => {
             }
             else{
                 console.log("percent low");
-                return res.redirect("/api")
+                return res.render("home",{error: "오류입니다."})
             }
 
 
