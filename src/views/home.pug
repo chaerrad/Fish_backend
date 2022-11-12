@@ -10,6 +10,11 @@ html(lang="ko")
     body(style= "background: rgb(105,153,227) " )
         div
             form(action="api"  method="post" enctype="multipart/form-data" style="text-align:center"  )
-                input(type="file" id="file" name="file" style= "display:none")
-                label(for="file" style= "display: block; margin: 0 auto; color:white ;  font-size:4em") 사진 Click
+                input(type="file" id="file" name="file" style= "display: block; margin: 0 auto; color:white ;" class="file")
+                
                 input(type="submit" value="사진 전송" style="background: rgb(163,213,251); border-color:white " )
+
+        script(src='./app.js' type="text/html")
+
+        
+       
