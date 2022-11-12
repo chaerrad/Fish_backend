@@ -49,7 +49,7 @@ export const getphoto = (req,res) => {
                 if(The_fish == 4)
                 return res.redirect(`/fish/darkrockfish`);
                 if(The_fish == 5)
-                return res.redirect(`/fish/dummy`);
+                return res.render("home",{error: "분류할수없는 물고기입니다."})
                 if(The_fish == 6)
                 return res.redirect(`/fish/eel`);
                 if(The_fish == 7)
