@@ -36,7 +36,7 @@ export const getphoto = (req,res) => {
             console.log(percent);        
             
             console.log(The_fish2);
-            if(percent==7 || percent ==8 || percent==9)
+            if(percent==0 ||percent==1 ||percent==2 ||percent==3 ||percent==4 ||percent==5 ||percent==6 || percent==7 || percent ==8 || percent==9)
             {
                 if(The_fish == 0)
                 return res.redirect(`/fish/altivelis`); 
